@@ -2,9 +2,9 @@
   "description": "kakeru app",
 
   "variables": {
-    "AWS_ACCOUNT_ID": "アカウントID",
-    "subnet_id": "パブリックのサブネットID",
-    "security_group_id": "hakaruと名付けられたセキュリティグループID"
+    "AWS_ACCOUNT_ID": "110908003814",
+    "subnet_id": "subnet-0b123602c9e9003d4",
+    "security_group_id": "sg-0aab1825bc296cc94"
   },
 
   "builders": [

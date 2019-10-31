@@ -13,7 +13,7 @@ cloud-config: cloud.cfg.d/99_defaults.cfg
 
 apt:
 	apt-get -y update
-	apt-get -y upgrade
+	DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 	apt-get -y install tsung python3 zip unzip
 
 awscli: apt

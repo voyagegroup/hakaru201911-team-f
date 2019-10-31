@@ -48,7 +48,7 @@ ulimit:
 # /opt/kakeru/Makefile on ec2 instance
 #
 
-ARTIFACTS_BUCKET ?= sunrise201911-team-a-kakeru-artifacts
+ARTIFACTS_BUCKET ?= sunrise201911-team-f-kakeru-artifacts
 ARTIFACTS_COMMIT ?= latest
 
 deploy: clean /opt/kakeru/app

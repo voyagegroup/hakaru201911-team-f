@@ -4,7 +4,7 @@
   "variables": {
     "AWS_ACCOUNT_ID": "アカウントID",
     "subnet_id": "パブリックのサブネットID",
-    "security_group_id": "kakeruと名付けられたセキュリティグループID"
+    "security_group_id": "hakaruと名付けられたセキュリティグループID"
   },
 
   "builders": [

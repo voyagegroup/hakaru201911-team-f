@@ -3,7 +3,7 @@
 # /root/hakaru/app/provisioning/instance/Makefile on ec2 instance
 #
 
-AWS_DEFAUTL_REGION := ap-norhteast-1
+AWS_DEFAULT_REGION := ap-norhteast-1
 
 .PHONY: all clean hakaru amazon-cloudwatch-agent healthcheck
 

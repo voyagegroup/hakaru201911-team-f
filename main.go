@@ -22,6 +22,7 @@ func main() {
 		panic(err.Error())
 	}
 	defer db.Close()
+	db.SetMaxOpenConns(40)
 
 	hakaruHandler := func(w http.ResponseWriter, r *http.Request) {
 		stmt, e := db.Prepare("INSERT INTO eventlog(at, name, value) values(NOW(), ?, ?)")

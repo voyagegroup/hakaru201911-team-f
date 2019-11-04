@@ -24,7 +24,7 @@ func main() {
 	defer db.Close()
 
 	db.SetMaxIdleConns(60000)
-	db.SetMaxOpenConns(8)
+	db.SetMaxOpenConns(20)
 
 	stmt, e := db.Prepare("INSERT INTO eventlog(at, name, value) values(NOW(), ?, ?)")
 	if e != nil {
@@ -36,7 +36,7 @@ func main() {
 		name := r.URL.Query().Get("name")
 		value := r.URL.Query().Get("value")
 
-		_, _ = stmt.Exec(name, value)
+		go stmt.Exec(name, value)
 
 		origin := r.Header.Get("Origin")
 		if origin != "" {

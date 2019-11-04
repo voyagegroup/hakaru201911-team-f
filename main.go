@@ -14,7 +14,7 @@ import (
 func main() {
 	dataSourceName := os.Getenv("HAKARU_DATASOURCENAME")
 	if dataSourceName == "" {
-		dataSourceName = "root:password@tcp(127.0.0.1:13306)/hakaru?interpolateParams=true"
+		dataSourceName = "root:password@tcp(127.0.0.1:13306)/hakaru"
 	}
 
 	db, err := sql.Open("mysql", dataSourceName)

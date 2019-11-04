@@ -24,7 +24,7 @@ func main() {
 	defer db.Close()
 
 	db.SetMaxIdleConns(60000)
-	db.SetMaxOpenConns(40)
+	db.SetMaxOpenConns(20)
 
 	stmt, e := db.Prepare("INSERT INTO eventlog(at, name, value) values(NOW(), ?, ?)")
 	if e != nil {

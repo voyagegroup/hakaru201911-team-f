@@ -36,7 +36,7 @@ func main() {
 		name := r.URL.Query().Get("name")
 		value := r.URL.Query().Get("value")
 
-		_, _ = stmt.Exec(name, value)
+		go stmt.Exec(name, value)
 
 		origin := r.Header.Get("Origin")
 		if origin != "" {
